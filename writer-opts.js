@@ -33,8 +33,34 @@ function getWriterOpts () {
         discard = false
       })
 
+      /**
+      "types": [
+        { "type": "feat", "section": "Features" },
+        { "type": "spike", "section": "Work in Progress" },
+        { "type": "breaking", "section": "Breaking" },
+        { "type": "enhance", "section": "Enhancements" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "release", "section": "Release" },
+        { "type": "chore", "hidden": true },
+        { "type": "docs", "hidden": false },
+        { "type": "style", "hidden": true },
+        { "type": "refactor", "hidden": true },
+        { "type": "perf", "hidden": true },
+        { "type": "test", "hidden": true }
+      ]
+      */
       if (commit.type === 'feat') {
-        commit.type = 'Features Dendron V2'
+        commit.type = 'Features'
+      } else if (commit.type === 'fix') {
+        commit.type = 'Bug Fixes'
+      } else if (commit.type === 'enhance') {
+        commit.type = 'Enhancements'
+      } else if (commit.type === 'fix') {
+        commit.type = 'Bug Fixes'
+      } else if (commit.type === 'fix') {
+        commit.type = 'Bug Fixes'
+      } else if (commit.type === 'fix') {
+        commit.type = 'Bug Fixes'
       } else if (commit.type === 'fix') {
         commit.type = 'Bug Fixes'
       } else if (commit.type === 'perf') {
